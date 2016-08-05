@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer Next GEN"
+    title="JIRA BlockChain Viewer"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
@@ -122,7 +122,6 @@ refrescar();
 var timeout = setTimeout(reloadValues, 5000);
 
 function reloadValues () {
-        alert("yeah");
         refrescar();
         timeout = setTimeout(reloadValues, 5000);
 }
