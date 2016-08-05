@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs
+    title="JIRA Issues"
+    author="Atlassian"
+    thumbnail=
+      '#staticResourceUrl("com.atlassian.jira.issues-gadget:jira-issues",
+         "jira-issues-thumbnail.png")'
+    description="A list of recently created JIRA Issues">
+
+    <Require feature="minimessage" />
+    <Require feature="dynamic-height" />
+
+  </ModulePrefs>
+
+  <UserPref
+    name="show_date"
+    display_name="Show Dates?"
+    datatype="bool"
+    default_value="true"/>
+  <UserPref
+    name="show_summ"
+    display_name="Show Summaries?"
+    datatype="bool"
+    default_value="true"/>
+  <UserPref
+    name="num_entries"
+    display_name="Number of Entries:"
+    default_value="5"
+    required="true"/>
+
+  <Content type="html"><![CDATA[
+    #requireResource("com.atlassian.jira.issues-gadget:resources")
+    <script>
+      // Request URL for most recently created,
+      // unresolved issues on this server
+      var url = "__ATLASSIAN_BASE_URL__/sr/" +
+        "jira.issueviews:searchrequest-xml" +
+        "/temp/SearchRequest.xml?" +
+        "created%3Aprevious=-1w&resolution=-1" +
+        "&sorter/field=issuekey&sorter/order=DESC" +
+        "&sorter/field=created&sorter/order=DESC" +
+        "&tempMax=20";
+    </script>
+    #includeResources()
+
+    <div id="content_div"></div>
+  ]]></Content>
+</Module>

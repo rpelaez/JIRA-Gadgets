@@ -1,0 +1,32 @@
+<atlassian-plugin
+  key="com.atlassian.jira.issues-gadget"
+  name="${project.name}"
+  pluginsVersion="2">
+  <plugin-info>
+    <version>${project.version}</version>
+  </plugin-info>
+
+  <resource
+    type="download"
+    name="jira-issues-thumbnail.png"
+    location="jira-issues-thumbnail.png"/>
+
+  <web-resource key="resources">
+    <resource
+      type="download"
+      name="jira-issues.js"
+      location="jira-issues.js">
+      <property key="content-type" value="text/javascript"/>
+    </resource>
+    <resource
+      type="download"
+      name="jira-issues.css"
+      location="jira-issues.css">
+      <property key="content-type" value="text/css"/>
+    </resource>
+  </web-resource>
+
+  <gadget
+    key="jira-issues"
+    location="jira-issues.xml"/>
+</atlassian-plugin>
