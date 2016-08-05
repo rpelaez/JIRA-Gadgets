@@ -24,7 +24,7 @@
   <Content type="html">
   <![CDATA[
     <script type="text/javascript">
- (function () {
+ (function refrescar() {
        AJS.$.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
             type: "GET",
@@ -116,6 +116,7 @@ AJS.$.ajax({
             timeout: 120000,
         });
        
+       refrescar();
         });
 
     </script>    
