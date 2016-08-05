@@ -30,7 +30,7 @@
   <Content type="html"><![CDATA[
     <link rel="stylesheet"
       href="http://labs.atlassian.com/svn/GADGETS/trunk/jira-issues/basic/jira-issues.css">
-
+HOLA LOCOSSSS!!!
     <div id="content_div"></div>
 
     <script type="text/javascript"
