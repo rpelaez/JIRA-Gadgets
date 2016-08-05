@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer Flipoo"
+    title="JIRA BlockChain Viewer Flipooyyy"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
@@ -19,6 +19,9 @@
     </Optional>
     #oauth
     #supportedLocales("gadget.common,your.gadget.resource.prefix")
+   #requireResource("com.atlassian.jira.gadgets:common")
+#requireResource("com.atlassian.gadgets.publisher:ajs-gadgets")
+#includeResources()
   </ModulePrefs>
 
   <Content type="html">
