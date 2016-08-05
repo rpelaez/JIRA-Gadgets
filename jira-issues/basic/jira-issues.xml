@@ -23,22 +23,9 @@
 
   <Content type="html">
   <![CDATA[
-  /* (1) This resource is required for using the gadget framework */
-    #requireResource("com.atlassian.gadgets.publisher:ajs-gadgets")
-    #includeResources()
- 
     <script type="text/javascript">
       (function () {
-        /* (2) Construct and initialise the gadget */
-        var gadget = AJS.Gadget({
-          baseUrl: "__ATLASSIAN_BASE_URL__", /* (3) Used to make base url available to gadget */
-          view: {...view-options...} /* (4) Defines the view logic */
-        });
-      })();
-    </script>    
-<script>
-function refrescar() {
-AJS.$.ajax({
+       AJS.$.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
             type: "GET",
 
@@ -128,10 +115,11 @@ AJS.$.ajax({
 
             timeout: 120000,
         });
-}
+       
+        });
+      })();
+    </script>    
 
-refrescar();
-</script>
 <style>
 .button {
   color: #900;
