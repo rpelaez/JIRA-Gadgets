@@ -8,11 +8,21 @@
 
     <Require feature="minimessage" />
     <Require feature="dynamic-height" />
-
+    <Optional feature="auth-refresh"/>
+    <Require feature="oauthpopup" />
+    <Require feature="setprefs" />
+    <Require feature="settitle" />
+    <Require feature="views" />
+    <Optional feature="atlassian.util" />
+    <Optional feature="gadget-directory">
+      <Param name="categories">Other</Param>
+    </Optional>
   </ModulePrefs>
 
   <Content type="html"><![CDATA[
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    #requireResource("com.atlassian.gadgets.publisher:ajs-gadgets")
+    #includeResources()
+    
     <script>
 function refrescar() {
 jQuery.ajax({
@@ -125,6 +135,7 @@ body {
 }
 </style>
 <input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>
+HOLA
 <table>
 <tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
 <tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
