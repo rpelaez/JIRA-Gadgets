@@ -13,7 +13,6 @@
     <Require feature="setprefs" />
     <Require feature="settitle" />
     <Require feature="views" />
-    <Require feature="ajs" />
     <Optional feature="atlassian.util" />
     <Optional feature="gadget-directory">
       <Param name="categories">Other</Param>
