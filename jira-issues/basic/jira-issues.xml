@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer Flipooyyyboyy"
+    title="JIRA BlockChain Viewer Rocker"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
@@ -23,13 +23,10 @@
 
   <Content type="html">
   <![CDATA[
-    <script type="text/javascript">
-(function () {
-	   var gadget = window.parent.AJS.Gadget({
-          baseUrl: "__ATLASSIAN_BASE_URL__", /* (3) Used to make base url available to gadget */
-          view: {} /* (4) Defines the view logic */
-       });
-       window.parent.AJS.$.ajax({
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+function refrescar() {
+jQuery.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
             type: "GET",
 
@@ -47,7 +44,7 @@
 
             timeout: 120000,
         });
-window.parent.AJS.$.ajax({
+jQuery.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/btc",
             type: "GET",
 
@@ -65,7 +62,7 @@ window.parent.AJS.$.ajax({
 
             timeout: 120000,
         });
-window.parent.AJS.$.ajax({
+jQuery.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/ltc",
             type: "GET",
 
@@ -83,7 +80,7 @@ window.parent.AJS.$.ajax({
 
             timeout: 120000,
         });
-window.parent.AJS.$.ajax({
+jQuery.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/vox",
             type: "GET",
 
@@ -101,7 +98,7 @@ window.parent.AJS.$.ajax({
 
             timeout: 120000,
         });
-window.parent.AJS.$.ajax({
+jQuery.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/etc",
             type: "GET",
 
@@ -119,17 +116,26 @@ window.parent.AJS.$.ajax({
 
             timeout: 120000,
         });
-      
-       
-       })();
+}
 
-    </script>    
-
+refrescar();
+</script>
 <style>
+.button {
+  color: #900;
+  font-weight: bold;
+  font-size: 150%;
+  text-transform: uppercase;
+  width: 100%;
+  background: #FF0;
+  border: 1px solid #900;
+}
+
 body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; font-style: normal; 
 }
 </style>
+<input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>
 <table>
 <tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
 <tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
