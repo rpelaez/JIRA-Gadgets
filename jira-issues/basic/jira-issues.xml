@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer Flip"
+    title="JIRA BlockChain Viewer Flipoo"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
@@ -25,6 +25,10 @@
   <![CDATA[
     <script type="text/javascript">
 (function () {
+	   var gadget = AJS.Gadget({
+          baseUrl: "__ATLASSIAN_BASE_URL__", /* (3) Used to make base url available to gadget */
+          view: {} /* (4) Defines the view logic */
+       });
        AJS.$.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
             type: "GET",
