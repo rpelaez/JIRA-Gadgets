@@ -12,6 +12,8 @@
     <Require feature="oauthpopup" />
     <Require feature="setprefs" />
     <Require feature="settitle" />
+    <Require feature="core" />
+    <Require feature="core.io" />
     <Require feature="views" />
     <Optional feature="atlassian.util" />
     <Optional feature="gadget-directory">
