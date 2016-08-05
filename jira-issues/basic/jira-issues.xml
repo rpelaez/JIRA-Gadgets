@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer"
+    title="JIRA BlockChain Viewer Loko"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
@@ -24,7 +24,7 @@
   <Content type="html">
   <![CDATA[
     <script type="text/javascript">
-      (function () {
+ (function () {
        AJS.$.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
             type: "GET",
@@ -117,7 +117,7 @@ AJS.$.ajax({
         });
        
         });
-      })();
+
     </script>    
 
 <style>
