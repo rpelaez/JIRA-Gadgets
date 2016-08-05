@@ -19,11 +19,11 @@
     </Optional>
   </ModulePrefs>
 
-  <Content type="html"><![CDATA[
+  <Content type="html"><![CDATA[   
+    <script>
     requireResource("com.atlassian.gadgets.publisher:ajs-gadgets")
     includeResources()
     
-    <script>
 function refrescar() {
 AJS.$.ajax({
             url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
@@ -135,7 +135,7 @@ body {
 }
 </style>
 <input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>
-HOLA ADIOS BYEBYE
+HOLA ADIOS BYEBYE AGUST
 <table>
 <tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
 <tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
