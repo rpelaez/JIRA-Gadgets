@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs
-    title="JIRA BlockChain Viewer Rocker"
+    title="JIRA BlockChain Viewer"
     author="Raul Pelaez"
     thumbnail="jira-issues-thumbnail.png"
     description="Control all time the price of the BlockChain currencies">
 
     <Require feature="minimessage" />
     <Require feature="dynamic-height" />
-    <Optional feature="auth-refresh"/>
+    <Require feature="auth-refresh"/>
     <Require feature="oauthpopup" />
     <Require feature="setprefs" />
     <Require feature="settitle" />
@@ -135,7 +135,7 @@ body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 12px; font-style: normal; 
 }
 </style>
-<input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>
+<!--<input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>-->
 <table>
 <tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
 <tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
