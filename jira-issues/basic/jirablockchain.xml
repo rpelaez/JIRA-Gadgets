@@ -3,7 +3,8 @@
   <ModulePrefs
     title="JIRA BlockChain Viewer"
     author="Raul Pelaez raulpelaez@gmail.com"
-    thumbnail="jira-issues-thumbnail.png"
+    thumbnail="jirablockchain-thumbnail.png"
+    screenshot="jirablockchain-screenshot.png"
     description="Control all time the price of the BlockChain currencies: Bitcoin, Litecoin, Ethereum, Ethereum Classic, Voxels">
 
     <Require feature="minimessage" />
