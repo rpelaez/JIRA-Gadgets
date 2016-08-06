@@ -148,7 +148,7 @@ body {
 }
 </style>
 <!--<input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>-->
-<table>
+<table style="overflow: auto; width: 100%; height: 100%; background-color:#ededed; border: 1px solid #990000;">
 <tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><a href="https://play.google.com/store/apps/details?id=com.phonegap.rauliki.blockchainviewer&hl=en" target="new"><img src="https://jirasupport.files.wordpress.com/2016/07/en_badge_web_generic.png" width="80px"></a></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
 <tr><td><b>ETH</b></td><td><font align="right" color="#7c06b7"><div id="eth"></div></font></td><td><font align="right" color="green"><div id="eth1"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
 <tr><td><b>ETC</b></td><td><font align="right" color="#7c06b7"><div id="etc"></div></font></td><td><font align="right" color="green"><div id="etc1"></div></font></td><td><td><font align="right"><div id="etc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1321.png" border=1></td></tr>
