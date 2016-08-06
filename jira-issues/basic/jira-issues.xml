@@ -32,7 +32,8 @@ jQuery.ajax({
 
             contentType: 'application/json; charset=utf-8',
             success: function(json) {
-                document.getElementById("eth").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR"; 
+                document.getElementById("eth").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR";
+                document.getElementById("eth1").innerHTML= (Math.round(json.price.usd * 10000) / 10000)+" USD"; 
                 if ( json.change[0] == "-" ) 
                 	color = "<font color='red'>"+json.change+"</font>";
                 else 
@@ -51,6 +52,7 @@ jQuery.ajax({
             contentType: 'application/json; charset=utf-8',
             success: function(json) {
                 document.getElementById("btc").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR";
+                document.getElementById("btc1").innerHTML= (Math.round(json.price.usd * 10000) / 10000)+" USD";
                 if ( json.change[0] == "-" ) 
                 	color = "<font color='red'>"+json.change+"</font>";
                 else 
@@ -69,6 +71,7 @@ jQuery.ajax({
             contentType: 'application/json; charset=utf-8',
             success: function(json) {
                 document.getElementById("ltc").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR"; 
+                document.getElementById("ltc1").innerHTML= (Math.round(json.price.usd * 10000) / 10000)+" USD"; 
                 if ( json.change[0] == "-" ) 
                 	color = "<font color='red'>"+json.change+"</font>";
                 else 
@@ -87,6 +90,7 @@ jQuery.ajax({
             contentType: 'application/json; charset=utf-8',
             success: function(json) {
                 document.getElementById("vox").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR"; 
+                document.getElementById("vox1").innerHTML= (Math.round(json.price.usd * 10000) / 10000)+" USD"; 
                 if ( json.change[0] == "-" ) 
                 	color = "<font color='red'>"+json.change+"</font>";
                 else 
@@ -105,6 +109,7 @@ jQuery.ajax({
             contentType: 'application/json; charset=utf-8',
             success: function(json) {
                 document.getElementById("etc").innerHTML= (Math.round(json.price.eur * 10000) / 10000)+" EUR"; 
+                document.getElementById("etc1").innerHTML= (Math.round(json.price.usd * 10000) / 10000)+" USD"; 
                 if ( json.change[0] == "-" ) 
                 	color = "<font color='red'>"+json.change+"</font>";
                 else 
@@ -144,12 +149,12 @@ body {
 </style>
 <!--<input type="button" name="REFRESH" value="REFRESH" onclick="javascript:refrescar();" class="button"></input><br>-->
 <table>
-<tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
-<tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
-<tr><td><b>ETC</b></td><td><font align="right"><div id="etc"></div></font></td><td><td><font align="right"><div id="etc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1321.png" border=1></td></tr>
-<tr><td><b>VOX</b></td><td><font align="right"><div id="vox"></div></font></td><td><td><font align="right"><div id="vox_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1208.png" border=1></td></tr>
-<tr><td><b>LTC</b></td><td><font align="right"><div id="ltc"></div></font></td><td><td><font align="right"><div id="ltc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/2.png" border=1></td></tr>
-<tr><td><b>BTC</b></td><td><font align="right"><div id="btc"></div></font></td><td><td><font align="right"><div id="btc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1.png" border=1></td></tr>
+<tr><td><b><u>COIN</u></b></td><td><font align="right"><b><u>PRICE</u></b></font></td><td></td><td><td><font align="right"><b><u>CHANGE</u></b></font></td><td><b><u><font align="right">GRAPH</font></u></b></td></tr>
+<tr><td><b>ETH</b></td><td><font align="right"><div id="eth"></div></font></td><td><font align="right"><div id="eth1"></div></font></td><td><td><font align="right"><div id="eth_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1027.png" border=1></td></tr>
+<tr><td><b>ETC</b></td><td><font align="right"><div id="etc"></div></font></td><td><font align="right"><div id="etc1"></div></font></td><td><td><font align="right"><div id="etc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1321.png" border=1></td></tr>
+<tr><td><b>VOX</b></td><td><font align="right"><div id="vox"></div></font></td><td><font align="right"><div id="vox1"></div></font></td><td><td><font align="right"><div id="vox_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1208.png" border=1></td></tr>
+<tr><td><b>LTC</b></td><td><font align="right"><div id="ltc"></div></font></td><td><font align="right"><div id="ltc1"></div></font></td><td><td><font align="right"><div id="ltc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/2.png" border=1></td></tr>
+<tr><td><b>BTC</b></td><td><font align="right"><div id="btc"></div></font></td><td><font align="right"><div id="btc1"></div></font></td><td><td><font align="right"><div id="btc_change"></div></font></td><td><img src="https://files.coinmarketcap.com/generated/sparklines/1.png" border=1></td></tr>
 </table>
   ]]>
 </Content>
