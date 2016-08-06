@@ -2,9 +2,9 @@
 <Module>
   <ModulePrefs
     title="JIRA BlockChain Viewer"
-    author="Raul Pelaez"
+    author="Raul Pelaez raulpelaez@gmail.com"
     thumbnail="jira-issues-thumbnail.png"
-    description="Control all time the price of the BlockChain currencies">
+    description="Control all time the price of the BlockChain currencies: Bitcoin, Litecoin, Ethereum, Ethereum Classic, Voxels">
 
     <Require feature="minimessage" />
     <Require feature="dynamic-height" />
